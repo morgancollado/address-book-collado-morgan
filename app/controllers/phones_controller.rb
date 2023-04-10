@@ -1,5 +1,6 @@
 class PhonesController < ApplicationController
   before_action :set_phone, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /phones or /phones.json
   def index
